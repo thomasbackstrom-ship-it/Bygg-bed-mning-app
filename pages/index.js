@@ -47,7 +47,7 @@ export default function App() {
 
   // ✅ MASSIMPORT
   const importStudents = () => {
-    const list = bulkInput.split("
+    const list = bulkInput.split("\\n").map(s => s.trim()).filter(Boolean);
 ").map(s => s.trim()).filter(Boolean);
     setStudents(list);
     localStorage.setItem("elevlista", JSON.stringify(list));
